@@ -1,0 +1,13 @@
+$sizes: 120;
+
+@mixin font-size-classes {
+    @for $i from 1 through $sizes {
+        $font_size: $i;
+
+        .font-size-#{$i} {
+            font-size: $font_size + px !important;
+        }
+    }
+}
+
+@include font-size-classes;

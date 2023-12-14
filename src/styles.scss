@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import 'assets/scss/variables.scss';
+@import 'assets/scss/font-size.scss';
+@import 'assets/scss/font-weight.scss';
+
+header {
+    padding-top: 9.5rem;
+    padding-bottom: 6rem;
+}
+
+section {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.bg-gethired {
+    background-color: $gethired-blue;
+}
+
+.text-gethired {
+    color: $gethired-blue;
+}
+
+.btn-rounded {
+    border-radius: 24px !important;
+}

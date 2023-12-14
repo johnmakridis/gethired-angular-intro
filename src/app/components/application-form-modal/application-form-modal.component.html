@@ -1,0 +1,67 @@
+<div class="modal fade" id="applicationFormModal" tabindex="-1" aria-labelledby="applicationFormModalLabel" data-bs-backdrop="static" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="applicationFormModalLabel">Δήλωση σημμετοχής</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <form #applicationForm="ngForm" (ngSubmit)="submitForm();">
+
+                <div class="modal-body">
+
+                    <div class="row">
+
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+
+                            <div class="mb-3">
+                                <label for="contactFullname" class="form-label">Ονοματεπώνυμο</label>
+                                <input type="text" class="form-control" name="contactFullname" id="contactFullname" placeholder="Το ονοματεπώνυμό σου"
+                                    [(ngModel)]="application.fullname" required>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="row">
+
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+
+                            <div class="mb-3">
+                                <label for="contactEmail" class="form-label">Email</label>
+                                <input type="email" class="form-control" name="contactEmail" id="contactEmail" placeholder="Το email σου"
+                                    [(ngModel)]="application.email" required>
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+
+                            <div class="mb-3">
+                                <label for="contactPhone" class="form-label">Τηλέφωνο</label>
+                                <input type="tel" class="form-control" name="contactPhone" id="contactPhone" placeholder="Το κινητό σου τηλέφωνο"
+                                    [(ngModel)]="application.phone" required>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success btn-rounded" [disabled]="!applicationForm.valid">Υποβολή</button>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>

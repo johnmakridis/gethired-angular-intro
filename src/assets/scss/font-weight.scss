@@ -1,0 +1,13 @@
+$sizes: 9;
+
+@mixin font-weight-classes {
+    @for $i from 1 through $sizes {
+        $font_weight: $i*100;
+
+        .font-weight-#{$font_weight} {
+            font-weight: $font_weight !important;
+        }
+    }
+}
+
+@include font-weight-classes;

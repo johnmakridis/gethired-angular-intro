@@ -1,0 +1,105 @@
+<!-- Header-->
+<header class="bg-light bg-gradient">
+    <div class="container px-4 text-center">
+        <h1 class="fw-bolder">Επικοινωνία</h1>
+        <p class="lead">Είμαστε πάντα διαθέσιμοι να σας βοηθήσουμε! Για οποιαδήποτε απορία, μη διστάσετε να μας στείλετε ένα μήνυμα.</p>
+    </div>
+</header>
+
+
+<section class="py-5 mb-5" id="about">
+
+    <div class="container px-4">
+
+        <div class="row gx-4 justify-content-center">
+
+            <div class="col-12">
+
+                <form #contactForm="ngForm">
+
+                    <div class="row justify-content-center">
+
+                        <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-6">
+
+                            <div class="row">
+
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+
+                                    <div class="mb-3">
+                                        <label for="contactFullname" class="form-label">Ονοματεπώνυμο</label>
+                                        <input type="text" class="form-control" name="contactFullname" id="contactFullname" placeholder="Το ονοματεπώνυμό σου"
+                                            [(ngModel)]="contact.fullname" required>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+
+                                    <div class="mb-3">
+                                        <label for="contactEmail" class="form-label">Email</label>
+                                        <input type="email" class="form-control" name="contactEmail" id="contactEmail" placeholder="Το email σου"
+                                            [(ngModel)]="contact.email" required>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="row justify-content-center">
+
+                        <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-6">
+
+                            <div class="mb-3">
+                                <label for="contactSubject" class="form-label">Subject</label>
+                                <input type="email" class="form-control" name="contactSubject" id="contactSubject" placeholder="Θέμα"
+                                    [(ngModel)]="contact.subject" required>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="row justify-content-center">
+
+                        <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-6">
+
+                            <div class="mb-3">
+                                <label for="contactMessage" class="form-label">Subject</label>
+                                <textarea class="form-control" name="contactMessage" id="contactMessage" rows="5" placeholder="Το μήνυμά σου"
+                                    [(ngModel)]="contact.message" required></textarea>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="row justify-content-center">
+
+                        <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-6 text-end">
+
+                            <button class="btn btn-primary" [disabled]="!contactForm.valid">Send message</button>
+
+                        </div>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
