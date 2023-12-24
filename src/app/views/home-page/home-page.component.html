@@ -4,8 +4,7 @@
 
         <div class="col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let repo of repositories">
 
-            <div class="card" style="width: 18rem;" *ngIf="repo.language === 'TypeScript'">
-                <!-- <img src="..." class="card-img-top" alt="..."> -->
+            <div class="card" style="width: 18rem;">
                 <div class="card-body">
                     <h5 class="card-title">{{repo.name}}</h5>
                     <p class="card-text">{{repo.owner.login}}</p>
